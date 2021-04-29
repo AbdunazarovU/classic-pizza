@@ -1,0 +1,353 @@
+/* Colors */
+:root{
+    --tex-color: rgb(0, 0, 0);
+    --burger-info: #F87848;
+    --background-color: #F0F5FB;
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+    url('../fonts/Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+    url('../fonts/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Light.woff2') format('woff2'),
+    url('../fonts/Montserrat-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+    url('../fonts/Montserrat-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* General Styles */
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #fff;
+}
+
+.site-header{
+    background-color: #f0f5fb;
+    background-image: url(../images/something.png);
+    background-repeat: no-repeat;
+    background-position: 99% bottom;
+}
+
+.container{
+    width: 1210px;
+    padding-right: 25px ;
+    padding-left: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Header Styles  */
+.site-nav__logo{
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4px;
+}
+.site-nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;   
+    align-items: center;
+}
+.site-nav__list{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin-left: 0;
+}
+.site-nav__item:not(:first-child){
+    margin-left: 40px;
+}
+.site-nav__link{
+    text-decoration: none;
+    color: var(--tex-color);
+    transition: 0.3s all;;
+    font-size: 16px;
+    line-height: 20px;
+}
+.working-time{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--tex-color);
+    position: relative;
+}
+.working-time::before{
+    content: "";
+    background-image: url("../images/dot.svg");
+    background-repeat: no-repeat;
+    display: block;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    top: 8px;
+    right: 140px;
+}
+.phone-number{
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+}
+.phone-number::before{
+    display: inline-block;
+    content: "";
+    width: 33px;
+    height: 33px;
+    background:url(../images/phone.png) no-repeat center center,
+    linear-gradient(287.74deg, #F58656 8.52%, #FE5626 92.72%);
+    box-shadow: 0px 4px 8px rgba(205, 169, 41, 0.26);
+    border-radius: 59px;
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.bottom-header{
+    text-align: center;
+    width: 50%;
+    padding-top: 105px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 121px;
+}
+
+
+/* SUGGESTION */
+.suggestion{
+    background-color: #f0f5fb;
+    background-image: url(../images/icons.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-bottom: 21px;
+}
+
+.bottom-header__suggestion{
+    position: relative;
+    width: 200px;
+    text-align: right;
+    margin-left: auto;
+    padding-bottom: 335px;
+    font-family: "Montserrat";
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.bottom-header__suggestion::before{
+    position: absolute;
+    top: -140px;
+    left: -700px;
+    content: "";
+    display: inline-block;
+    width: 800px;
+    height: 620px;
+    background-image: url(../images/pizza.png);
+}
+
+.main__img{
+    display: block;
+    margin-left: auto;
+}
+
+.popular_dishes__title{
+    font-size: 48px;
+    line-height: 59px;
+    text-align: center;
+}
+
+.popular_dishes{
+    margin-bottom: 50px;
+}
+
+.popular_dishes__navigation{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.popular-dishes__link{
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    padding: 16px 45px;
+    background-color: #ECEEF6;
+    border-radius: 45px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+}
+
+.popular-dishes__link:not(a:last-child){
+    margin-right: 31px;
+}
+
+/* PIZZA CONTAINER */
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+}
+
+.wrapper__dishes{
+    width: 260px;
+    padding-left: 25px;
+    padding-right: 15px;
+    padding-top: 36px;
+    border: 2px solid #ECEEF7;
+    border-radius: 15px;
+    margin-bottom: 29px;
+}
+
+.wrapper__dishes:not(div:nth-child(4n)){
+    margin-right: 40px;
+}
+
+.pizza-img{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.title-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-wrapper__title{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.title-wrapper__span{
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 140%;
+    text-align: right;
+}
+
+.wrapper__dishes__text{
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 140%;
+    margin: 0;
+    margin-bottom: 19px;
+}
+
+.wrapper__dishes__text--big{
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 140%;
+    text-align: center;
+    color: #121146;
+    margin: 0;
+}
+
+.pizza_order-container{
+    position: relative;
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    border-right: #ECEEF6 2px solid;
+    border-bottom: #ECEEF6 2px solid;
+    margin: 0 auto;
+    margin-bottom: -24px;
+    border-bottom-right-radius: 20px;
+}
+
+.pizza-order{
+    position: absolute;
+    top: 9px;
+    right: 6px;
+    padding: 3px 6px;
+    border: 2px solid #ECEEF6;
+    background: #fff;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+
+}
+
+.reset_btn{
+    display: table;
+    margin: 0 auto;
+    margin-bottom: 103px;
+    padding: 18px;
+    background: linear-gradient(287.74deg, #F58656 8.52%, #FE5626 92.72%);
+    box-shadow: 0px 4px 8px rgba(205, 169, 41, 0.26);
+    border-radius: 50%;
+}
+
+.reset_btn__img{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+/* Blank */
+.page{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.page h1{
+    margin-bottom: 0;
+}
+.page span{
+    font-size: 20px;
+}
