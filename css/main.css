@@ -227,6 +227,12 @@ body {
 }
 
 /* PIZZA CONTAINER */
+.main__container{
+    background-image: url(../images/main-background.png);
+    background-repeat: no-repeat;
+    background-position: center 215px;
+}
+
 .wrapper{
     display: flex;
     flex-wrap: wrap;
